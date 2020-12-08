@@ -8,6 +8,7 @@ category: ML
 use_math: true
 thumbnail: /assets/img/thumbnail/linear_regression.png
 ---
+
 ## 선형 회귀(Linear Regression)  
 &nbsp;
 #### 1) 선형 회귀란?

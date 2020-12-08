@@ -5,6 +5,7 @@ summary: Special Symbols - 영어로 말하는 특수문자
 author: Jun
 date: '2020-12-03 20:35:23 +0530'
 category: javascript
+use_math: false
 thumbnail: /assets/img/thumbnail/keyboard.jpeg
 ---
 
