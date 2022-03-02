@@ -569,6 +569,11 @@ header {
 /* floating btn for buy me coffee */
 #bmc-wbtn{
     bottom: 40px !important;
+    display: none !important;
+}
+
+.mkw-makerwidget-container {
+    display: none !important;
 }
 
 /* Disqus */
@@ -743,12 +748,12 @@ header {
 }
 
 
-#newsletter_footer {
-    background-color: var(--newsletter-background-color);
-    color: var(--main-text-color);
-    text-align: center;
-    margin-top: 100px;
-}
+// #newsletter_footer {
+//     background-color: var(--newsletter-background-color);
+//     color: var(--main-text-color);
+//     text-align: center;
+//     margin-top: 100px;
+// }
 
     #mc-embedded-subscribe-form {
         width: 100%;
