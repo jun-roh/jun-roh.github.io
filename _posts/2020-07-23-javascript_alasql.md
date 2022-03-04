@@ -44,17 +44,17 @@ Excel, CSV, JSON, TAB, IndexedDB, LocalStorage, SQLite 형식의 파일을 사�
 
 ### npm installation
 
-"```"
+```
 yarn add alasql         # yarn
 npm install alasql    # npm
 npm install –g alasql    # global installation for command line tools
-"```"
+```
 
 ### CDN 이용
 
-"```"
-[<script src="https://cdn.jsdelivr.net/npm/alasql@0.6"></script>]
-"```"
+```
+<script src="https://cdn.jsdelivr.net/npm/alasql@0.6"></script>
+```
 
 ### Local Library 저장 사용
 
@@ -66,7 +66,7 @@ npm install –g alasql    # global installation for command line tools
 
 ### 1) SQL Table
 
-"```"
+```
 /* create SQL Table and add data */
 alasql("CREATE TABLE cities (city string, pop number)");
 
@@ -75,29 +75,29 @@ alasql("INSERT INTO cities VALUES ('Paris',2249975),('Berlin',3517424),('Madrid'
 
 /* execute query */
 var res1 = alasql("SELECT * FROM cities WHERE pop < 3500000 ORDER BY pop DESC");
-"```"
+```
 
 ### 2) Array Object
 
-"```"
+```
 var data = [ {a: 1, b: 10}, {a: 2, b: 20}, {a: 1, b: 30} ];
 var res2 = alasql('SELECT a, SUM(b) AS b FROM ? GROUP BY a',[data]);
-"```"
+```
 
 ### 3) Spreadsheet
 
-"```"
+```
 alasql(['SELECT * FROM XLS("data/mydata") WHERE city = "London" '])
         .then(function(res){
             console.log(res);
         }).catch(function(err){
             console.log('Does the file exist? There was an error:', err);
         });
-"```"
+```
 
 ### 4) Bulk Data Load
 
-"```"
+```
 alasql("CREATE TABLE example4 (a INT, b INT)");
 
 // alasql's data store for a table can be assigned directly
@@ -107,11 +107,11 @@ alasql.tables.example4.data = [ {a:2,b:6}, {a:3,b:4} ];
 alasql("INSERT INTO example4 VALUES (1,5)");
 
 var res = alasql("SELECT * FROM example4 ORDER BY b DESC");
-"```"
+```
 
 ### 5) Precompile Statements
 
-"```"
+```
 var data = [{a:1},{a:2},{a:3},{a:4},{a:5}];
 
 // Compile
@@ -119,11 +119,11 @@ var mysum = alasql.compile("SELECT VALUE SUM(a) FROM ? WHERE a > 2");
 
 // Run
 var res5 = mysum([data])
-"```"
+```
 
 ## 3\. Custom Function
 
-"```"
+```
 /* Query에서 datetime 함수를 사용하기 위해서 custom 함수 생성 */
 alasql.fn.datetime = function (param) {
     var origin_date = new Date((Date.parse(param)));
@@ -131,15 +131,15 @@ alasql.fn.datetime = function (param) {
 }
 
 var res = alasql('SELECT datetime(’20200716’)’);
-"```"
+```
 
 ## 4\. 기본적으로 제공하는 Function
 
 Custom 함수가 아니더라도 기본적으로 제공하는 함수들이 있습니다.
 
-"```"
+```
 git clone https://github.com/agershun/alasql.wiki.git
-"```"
+```
 
 기본적인 sql 문법을 제공하지만 Wiki 를 통해서 한번 더 제공되는 기능인지 확인 하신 후 사용하시기를 추천 드립니다.
 
