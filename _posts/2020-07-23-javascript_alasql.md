@@ -53,7 +53,7 @@ npm install –g alasql    # global installation for command line tools
 ### CDN 이용
 
 "```"
-<script src="https://cdn.jsdelivr.net/npm/alasql@0.6"></script>
+[<script src="https://cdn.jsdelivr.net/npm/alasql@0.6"></script>]
 "```"
 
 ### Local Library 저장 사용
