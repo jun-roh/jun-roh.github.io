@@ -42,7 +42,7 @@ Excel, CSV, JSON, TAB, IndexedDB, LocalStorage, SQLite 형식의 파일을 사�
 
 ## 1\. 설치
 
-#### npm installation
+### npm installation
 
 "```"
 yarn add alasql         # yarn
@@ -50,13 +50,13 @@ npm install alasql    # npm
 npm install –g alasql    # global installation for command line tools
 "```"
 
-#### CDN 이용
+### CDN 이용
 
 "```"
 <script src="https://cdn.jsdelivr.net/npm/alasql@0.6"></script>
 "```"
 
-#### Local Library 저장 사용
+### Local Library 저장 사용
 
 [https://github.com/agershun/alasql/tree/develop/dist](https://github.com/agershun/alasql/tree/develop/dist)
 
@@ -64,7 +64,7 @@ npm install –g alasql    # global installation for command line tools
 
 ## 2\. 데이터 세팅 및 사용
 
-#### 1) SQL Table
+### 1) SQL Table
 
 "```"
 /* create SQL Table and add data */
@@ -77,14 +77,14 @@ alasql("INSERT INTO cities VALUES ('Paris',2249975),('Berlin',3517424),('Madrid'
 var res1 = alasql("SELECT * FROM cities WHERE pop < 3500000 ORDER BY pop DESC");
 "```"
 
-#### 2) Array Object
+### 2) Array Object
 
 "```"
 var data = [ {a: 1, b: 10}, {a: 2, b: 20}, {a: 1, b: 30} ];
 var res2 = alasql('SELECT a, SUM(b) AS b FROM ? GROUP BY a',[data]);
 "```"
 
-#### 3) Spreadsheet
+### 3) Spreadsheet
 
 "```"
 alasql(['SELECT * FROM XLS("data/mydata") WHERE city = "London" '])
@@ -95,7 +95,7 @@ alasql(['SELECT * FROM XLS("data/mydata") WHERE city = "London" '])
         });
 "```"
 
-#### 4) Bulk Data Load
+### 4) Bulk Data Load
 
 "```"
 alasql("CREATE TABLE example4 (a INT, b INT)");
@@ -109,7 +109,7 @@ alasql("INSERT INTO example4 VALUES (1,5)");
 var res = alasql("SELECT * FROM example4 ORDER BY b DESC");
 "```"
 
-#### 5) Precompile Statements
+### 5) Precompile Statements
 
 "```"
 var data = [{a:1},{a:2},{a:3},{a:4},{a:5}];
